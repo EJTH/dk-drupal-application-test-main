@@ -1,0 +1,5 @@
+name: Aller Content API
+type: module
+description: 'Exposes node content to frontend'
+core_version_requirement: ^9.3 || ^10
+package: AllerApi
