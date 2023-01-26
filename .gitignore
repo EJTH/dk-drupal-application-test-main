@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+/vendor
+web/modules/common
+web/modules/contrib
+web/libraries

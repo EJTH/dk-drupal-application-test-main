@@ -1,0 +1,83 @@
+{
+    "name": "allermedia/dk-drupal-application-test",
+    "description": "Project for creating a base setup for testing applications for Aller Web",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/paragraphs": "^1.15",
+        "drush/drush": "^11"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "README.md": false
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        }
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpunit/phpunit": "^9",
+        "squizlabs/php_codesniffer": "^3.5",
+        "symfony/phpunit-bridge": "^6"
+    }
+}

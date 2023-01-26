@@ -1,0 +1,17 @@
+uuid: 3089ac90-38af-436c-9fde-0938b7d97ee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.content
+    - node.type.article
+  module:
+    - user
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content: {  }
+hidden:
+  content: true
+  links: true
