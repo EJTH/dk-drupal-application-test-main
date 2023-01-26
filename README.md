@@ -1,4 +1,14 @@
-# Aller Application Test
+
+# Aller Application Test solution
+To use the RESTful endpoint you must first enable the module 'aller_resful_api' with drush.
+
+`drush pm:install aller_restful_api`
+
+Optionally use drush to enable and use 'restui' module to configure the endpoint through backend configuration.
+
+`drush pm:install restui`
+
+# Aller Application Test 
 
 The idea with this repo, is to give a starting point for applicants who want to
 a code exercise test.
